@@ -14,6 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	WSADATA wsaData;
  SimpleServer server;
+
 	cout << "Initializing winsock... ";
  
 	if (WSAStartup(MAKEWORD(REQ_WINSOCK_VER,0), &wsaData)==0)
@@ -26,10 +27,12 @@ int _tmain(int argc, _TCHAR* argv[])
 			int port = DEFAULT_PORT;
 			if (argc > 1)
 				port = atoi(argv[1]);
-			while(true)
-			{
+		
+		while(true)
+		{
 				server.run();
-			}
+		}
+			
 		}
 		else
 		{

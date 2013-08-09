@@ -6,7 +6,7 @@
 #include <sstream>
 using namespace std;
 const int  DEFAULT_PORT  = 8080;	
-const int  TEMP_BUFFER_SIZE  = 1024;
+const int  TEMP_BUFFER_SIZE  = 128;
 class SimpleServer
 {
 public:
@@ -20,6 +20,7 @@ private:
 	void setSocketAddress();
 	void HandleConnection( SOCKET clientSocket, const sockaddr_in &sockAddr );
 	string getHostDescription( const sockaddr_in &address);
-	string answer(string HTTPrequest);
+	string answer(const string &HTTPrequest);
+	string getAddressFromHTTPRequest(string HTTPrequest);
 };
 

@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio">
+<TITLE>Main page</TITLE>
+</HEAD>
+<BODY>
+    Dynamic memory
+This header describes functions used to manage dynamic storage in C++.
+
+Exceptionally within the standard library, this header declares several functions in the global namespace instead of within the std namespace: These are the operator overloads for operator new and operator delete, which handle dynamic storage requests. Some of these functions have also the special property of being implicitly declared and replaceable.
+
+The header also defines some specific types and the set_new_handler / get_new_handler pair of functions:
+
+Functions
+operator new
+Allocate storage space (function )
+operator new[]
+Allocate storage space for array (function )
+operator delete
+Deallocate storage space (function )
+operator delete[]
+Deallocate storage space of array (function )
+set_new_handler
+Set new handler function (function )
+get_new_handler 
+Get new handler function (function )
+
+Types
+nothrow_t
+Nothrow type (type )
+new_handler
+Type of new handler function (type )
+bad_alloc
+Exception thrown on failure allocating memory (class )
+bad_array_new_length 
+Exception on bad array length (class )
+
+Constants
+nothrow
+Nothrow constant (constant )
+
+
+</BODY>
+</HTML>
